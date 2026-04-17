@@ -7,18 +7,18 @@
 </head>
 <body>
     <div id="app"></div>
-    <script src="https://unpkg.com/react/umd/react.development.js"></script>
-    <script src="https://unpkg.com/react-dom/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
-    <script type="text/babel">
-    //함수형 React Component!!
-    let Hello = function(props) {
-        return (
-            <h1>Hello World!!!</h1>
-        );
-    }
 
-    ReactDOM.render(<Hello />, document.getElementById('app'));
+    <script type="text/babel">
+        const root = ReactDOM.createRoot(document.getElementById('app'));
+
+        function Hello() {
+            return <h1>Hello World!!!</h1>;
+        }
+
+        root.render(<Hello />);
     </script>
 </body>
 </html>

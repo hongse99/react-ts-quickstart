@@ -1,4 +1,3 @@
-import React from "react";
 
 type CountryType = {
   no: number;
@@ -16,13 +15,14 @@ const CountryList = () => {
 
   let countries = list.map((item, index) => {
     return (
-      <li key={item.no} className={item.visited ? "list-group-item active" : "list-group-item"}>
+      <li key={item.no} 
+          className={item.visited ? "list-group-item active" : "list-group-item"}>
         {item.country}
       </li>
     );
   });
 
-  return <ul className="list-group">{countries}</ul>;
+  return <ul className="list-group">{ countries }</ul>
 };
 
 export default CountryList;
